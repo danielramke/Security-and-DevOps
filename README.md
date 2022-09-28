@@ -19,7 +19,7 @@ Once the project is set up, you will see 5 packages:
 
 * controllers - these contain the api endpoints for our app, 1 per model. Note they all have the `@RestController` annotation to allow Spring to understand that they are a part of a REST API
 
-In resources, you'll see the application configuration that sets up our database and Hibernate, It also contains a data.sql file with a couple of items to populate the database with. Spring will run this file every time the application starts
+In resources, you'll see the application configuration that sets up our database and Hibernate, It also contains a import.sql file with a couple of items to populate the database with. Spring will run this file every time the application starts
 
 In eclipse, you can right click the project and click  “run as” and select Spring Boot application. The application should tell you it’s starting in the console view. Once started, using a REST client, such as Postman, explore the APIs.
 
