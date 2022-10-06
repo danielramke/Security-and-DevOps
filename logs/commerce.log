@@ -13540,3 +13540,45 @@ Consider defining a bean of type 'org.springframework.security.authentication.Au
 06-10-2022 13:44:29 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 06-10-2022 13:44:29 INFO  o.s.s.w.DefaultSecurityFilterChain:55 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6454cbe6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@31b8414f, org.springframework.security.web.context.SecurityContextPersistenceFilter@340d08d7, org.springframework.security.web.header.HeaderWriterFilter@33dee059, org.springframework.web.filter.CorsFilter@29d0c10f, org.springframework.security.web.authentication.logout.LogoutFilter@4b72880c, de.lyth.security.JWTAuthenticationFilter@5df39fc0, de.lyth.security.JWTAuthenticationVerificationFilter@1fba7463, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@771a867, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19b08f3a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cfbece2, org.springframework.security.web.session.SessionManagementFilter@448b3cdd, org.springframework.security.web.access.ExceptionTranslationFilter@6b4d50f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1bc552f3]
 06-10-2022 13:44:29 INFO  o.s.b.d.a.OptionalLiveReloadServer:59 - LiveReload server is running on port 35729
+06-10-2022 13:44:30 INFO  o.s.b.w.e.t.TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+06-10-2022 13:44:30 INFO  d.l.SecurityAndDevOpsApplication:61 - Started SecurityAndDevOpsApplication in 4.779 seconds (JVM running for 5.578)
+06-10-2022 15:20:26 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-10-2022 15:20:26 WARN  o.s.b.f.s.DisposableBeanAdapter:222 - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Die Datenbank wurde bereits geschlossen (um das automatische Schliessen beim Stopp der VM zu deaktivieren, die Datenbank URL mit ";DB_CLOSE_ON_EXIT=FALSE" ergänzen)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+06-10-2022 15:20:26 INFO  c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+06-10-2022 15:20:26 INFO  c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+06-10-2022 15:20:30 INFO  d.l.SecurityAndDevOpsApplication:55 - Starting SecurityAndDevOpsApplication using Java 17.0.4 on PC-152 with PID 19288 (C:\Users\Daniel\IdeaProjects\Security-and-DevOps\target\classes started by Daniel in C:\Users\Daniel\IdeaProjects\Security-and-DevOps)
+06-10-2022 15:20:30 INFO  d.l.SecurityAndDevOpsApplication:634 - No active profile set, falling back to 1 default profile: "default"
+06-10-2022 15:20:30 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+06-10-2022 15:20:30 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+06-10-2022 15:20:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06-10-2022 15:20:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate:201 - Finished Spring Data repository scanning in 64 ms. Found 4 JPA repository interfaces.
+06-10-2022 15:20:32 INFO  o.s.b.w.e.t.TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+06-10-2022 15:20:32 INFO  o.a.c.c.StandardService:173 - Starting service [Tomcat]
+06-10-2022 15:20:32 INFO  o.a.c.c.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+06-10-2022 15:20:32 INFO  o.a.c.c.C.[.[.[/]:173 - Initializing Spring embedded WebApplicationContext
+06-10-2022 15:20:32 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext:292 - Root WebApplicationContext: initialization completed in 1566 ms
+06-10-2022 15:20:32 INFO  c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+06-10-2022 15:20:32 INFO  c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+06-10-2022 15:20:32 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration:98 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bootapp'
+06-10-2022 15:20:32 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+06-10-2022 15:20:32 INFO  o.h.Version:44 - HHH000412: Hibernate ORM core version 5.6.11.Final
+06-10-2022 15:20:32 INFO  o.h.a.c.Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+06-10-2022 15:20:33 INFO  o.h.d.Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06-10-2022 15:20:33 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06-10-2022 15:20:33 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-10-2022 15:20:34 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06-10-2022 15:20:34 INFO  o.s.s.w.DefaultSecurityFilterChain:55 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6cfbece2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@438c80cb, org.springframework.security.web.context.SecurityContextPersistenceFilter@32e59f54, org.springframework.security.web.header.HeaderWriterFilter@340d08d7, org.springframework.web.filter.CorsFilter@2c00ae5, org.springframework.security.web.authentication.logout.LogoutFilter@2ecf4140, de.lyth.security.JWTAuthenticationFilter@4e956fb2, de.lyth.security.JWTAuthenticationVerificationFilter@7dba167e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19b08f3a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@116029df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a974bda, org.springframework.security.web.session.SessionManagementFilter@771a867, org.springframework.security.web.access.ExceptionTranslationFilter@34a3502f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@532c27d6]
+06-10-2022 15:20:34 INFO  o.s.b.d.a.OptionalLiveReloadServer:59 - LiveReload server is running on port 35729
+06-10-2022 15:20:34 INFO  o.s.b.w.e.t.TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+06-10-2022 15:20:34 INFO  d.l.SecurityAndDevOpsApplication:61 - Started SecurityAndDevOpsApplication in 4.733 seconds (JVM running for 5.719)
+06-10-2022 15:20:40 INFO  o.a.c.c.C.[.[.[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06-10-2022 15:20:40 INFO  o.s.w.s.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+06-10-2022 15:20:40 INFO  o.s.w.s.DispatcherServlet:547 - Completed initialization in 2 ms
+06-10-2022 15:20:41 INFO  d.l.c.UserController:63 - Created successfully new user: Daniel
+06-10-2022 15:21:38 INFO  d.l.c.CartController:48 - Cart created for user= Daniel and items [ItemOne].
+06-10-2022 15:22:03 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-10-2022 15:22:03 WARN  o.s.b.f.s.DisposableBeanAdapter:222 - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Die Datenbank wurde bereits geschlossen (um das automatische Schliessen beim Stopp der VM zu deaktivieren, die Datenbank URL mit ";DB_CLOSE_ON_EXIT=FALSE" ergänzen)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+06-10-2022 15:22:03 INFO  c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+06-10-2022 15:22:03 INFO  c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
