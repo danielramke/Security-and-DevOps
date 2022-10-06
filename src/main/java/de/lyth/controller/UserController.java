@@ -32,18 +32,18 @@ public class UserController {
 
     @GetMapping("/{name}")
     public ResponseEntity<User> findByName(@PathVariable String name) {
-        User user = userRepository.findByName(name);
+        User user = userRepository.findByUsername(name);
         return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
     }
 
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody CreateUserRequest request) {
-        if(userRepository.existsByName(request.getName())) {
-            log.warn("Username {} is already taken! Try another username...", request.getName());
-            return ResponseEntity.badRequest().body(String.format("Username %s is already taken! Please chose another one!", request.getName()));
+        if(userRepository.existsByUsername(request.getUsername())) {
+            log.warn("Username {} is already taken! Try another username...", request.getUsername());
+            return ResponseEntity.badRequest().body(String.format("Username %s is already taken! Please chose another one!", request.getUsername()));
         }
         User user = new User();
-        user.setName(request.getName());
+        user.setUsername(request.getUsername());
         Cart cart = new Cart();
         cartRepository.save(cart);
         user.setCart(cart);
@@ -60,7 +60,7 @@ public class UserController {
 
         user.setPassword(encoder.encode(request.getPassword()));
         userRepository.save(user);
-        log.info("Created successfully new user: " + request.getName());
+        log.info("Created successfully new user: " + request.getUsername());
         return ResponseEntity.ok(user);
     }
 

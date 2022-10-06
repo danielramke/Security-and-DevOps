@@ -36,7 +36,7 @@ public class CartController {
 
     @PostMapping("/addToCart")
     public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
-        User user = userRepository.findByName(request.getUsername());
+        User user = userRepository.findByUsername(request.getUsername());
         if(user == null) return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         Optional<Item> item = itemRepository.findById(request.getItemID());
         if(item.isEmpty()) ResponseEntity.status(HttpStatus.NOT_FOUND).build();
@@ -45,14 +45,14 @@ public class CartController {
         IntStream.range(0, request.getQuantity())
                 .forEach(i -> cart.addItem(item.get()));
         cartRepository.save(cart);
-        log.info(String.format("Cart created for user= %s and items %s.", user.getName(),
+        log.info(String.format("Cart created for user= %s and items %s.", user.getUsername(),
                 user.getCart().getItems().stream().map(Item::getName).collect(Collectors.toList())));
         return ResponseEntity.ok(cart);
     }
 
     @PostMapping("/removeFromCart")
     public ResponseEntity<Cart> removeFormCart(@RequestBody ModifyCartRequest request) {
-        User user = userRepository.findByName(request.getUsername());
+        User user = userRepository.findByUsername(request.getUsername());
         if(user == null) return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         Optional<Item> item = itemRepository.findById(request.getItemID());
         if(item.isEmpty()) ResponseEntity.status(HttpStatus.NOT_FOUND).build();
@@ -61,7 +61,7 @@ public class CartController {
         IntStream.range(0, request.getQuantity())
                 .forEach(i -> cart.removeItem(item.get()));
         cartRepository.save(cart);
-        log.info(String.format("User %s removed item %s from cart.", user.getName(), item.get().getName()));
+        log.info(String.format("User %s removed item %s from cart.", user.getUsername(), item.get().getName()));
         return ResponseEntity.ok(cart);
     }
 

@@ -20,7 +20,7 @@ public class User {
 
     @Column(nullable = false, unique = true)
     @JsonProperty
-    private String name;
+    private String username;
 
     @Column(nullable = false)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)

@@ -22,7 +22,7 @@ public class OrderController {
 
     @PostMapping("/submit/{name}")
     public ResponseEntity<Order> submit(@PathVariable String name) {
-        User user = userRepository.findByName(name);
+        User user = userRepository.findByUsername(name);
         if(user == null) return ResponseEntity.notFound().build();
 
         Order order = Order.createFromCart(user.getCart());
@@ -32,7 +32,7 @@ public class OrderController {
 
     @GetMapping("/history/{name}")
     public ResponseEntity<List<Order>> getOrdersForUser(@PathVariable String name) {
-        User user = userRepository.findByName(name);
+        User user = userRepository.findByUsername(name);
         if(user == null) return ResponseEntity.notFound().build();
 
         return ResponseEntity.ok(orderRepository.findByUser(user));

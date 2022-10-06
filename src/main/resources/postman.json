@@ -1,213 +1,213 @@
 {
-  "info": {
-    "_postman_id": "38e41b07-b8c9-49df-94e4-2057e1d4888d",
-    "name": "Udacity P4",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "Create User",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n    \"name\": \"Daniel\",\r\n    \"password\": \"1234567\",\r\n    \"confirmPassword\": \"1234567\"\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://localhost:8080/api/user/create",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "api",
-            "user",
-            "create"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Get User",
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "Lyth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEYW5pZWwiLCJleHAiOjE2NzI0MDQ3MDV9.25t_rLB5l6daHQIg03YVTiJTxY3MM59Pxa58SX1BnMtBMyIUG8K29vOouPAnOriCnGvXtUQDeqz0dT3C-3ySbw",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "http://localhost:8080/api/user/Daniel",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "api",
-            "user",
-            "Daniel"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Add to Cart",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "Lyth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEYW5pZWwiLCJleHAiOjE2NzI0MDQ3MDV9.25t_rLB5l6daHQIg03YVTiJTxY3MM59Pxa58SX1BnMtBMyIUG8K29vOouPAnOriCnGvXtUQDeqz0dT3C-3ySbw",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n    \"name\": \"Daniel\",\r\n    \"itemId\": 1,\r\n    \"quantity\": 1\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://localhost:8080/api/cart/addToCart",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "api",
-            "cart",
-            "addToCart"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Submit an Order",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "Lyth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEYW5pZWwiLCJleHAiOjE2NzI0MDQ3MDV9.25t_rLB5l6daHQIg03YVTiJTxY3MM59Pxa58SX1BnMtBMyIUG8K29vOouPAnOriCnGvXtUQDeqz0dT3C-3ySbw",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "http://localhost:8080/api/order/submit/Daniel",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "api",
-            "order",
-            "submit",
-            "Daniel"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Get Order History",
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "Lyth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEYW5pZWwiLCJleHAiOjE2NzI0MDQ3MDV9.25t_rLB5l6daHQIg03YVTiJTxY3MM59Pxa58SX1BnMtBMyIUG8K29vOouPAnOriCnGvXtUQDeqz0dT3C-3ySbw",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "http://localhost:8080/api/order/history/Daniel",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "api",
-            "order",
-            "history",
-            "Daniel"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Get Item By Id",
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "Lyth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEYW5pZWwiLCJleHAiOjE2NzI0MDQ3MDV9.25t_rLB5l6daHQIg03YVTiJTxY3MM59Pxa58SX1BnMtBMyIUG8K29vOouPAnOriCnGvXtUQDeqz0dT3C-3ySbw",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "http://localhost:8080/api/item/1",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "api",
-            "item",
-            "1"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Log In",
-      "request": {
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n    \"name\": \"Daniel\",\r\n    \"password\": 1234567\r\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "http://localhost:8080/login",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8080",
-          "path": [
-            "login"
-          ]
-        }
-      },
-      "response": []
-    }
-  ]
+	"info": {
+		"_postman_id": "9c4e644c-7a95-485a-8cdf-ffd5f28d5a83",
+		"name": "Udacity P4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Daniel\",\r\n    \"password\": \"1234567\",\r\n    \"confirmPassword\": \"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Lyth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEYW5pZWwiLCJleHAiOjE2NzI0MDQ3MDV9.25t_rLB5l6daHQIg03YVTiJTxY3MM59Pxa58SX1BnMtBMyIUG8K29vOouPAnOriCnGvXtUQDeqz0dT3C-3ySbw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/user/Daniel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"Daniel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add to Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Lyth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEYW5pZWwiLCJleHAiOjE2NzI0MDQ3MDV9.25t_rLB5l6daHQIg03YVTiJTxY3MM59Pxa58SX1BnMtBMyIUG8K29vOouPAnOriCnGvXtUQDeqz0dT3C-3ySbw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Daniel\",\r\n    \"itemID\": 1,\r\n    \"quantity\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cart/addToCart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"addToCart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit an Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Lyth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEYW5pZWwiLCJleHAiOjE2NzI0MDQ3MDV9.25t_rLB5l6daHQIg03YVTiJTxY3MM59Pxa58SX1BnMtBMyIUG8K29vOouPAnOriCnGvXtUQDeqz0dT3C-3ySbw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/order/submit/Daniel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order",
+						"submit",
+						"Daniel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order History",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Lyth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEYW5pZWwiLCJleHAiOjE2NzI0MDQ3MDV9.25t_rLB5l6daHQIg03YVTiJTxY3MM59Pxa58SX1BnMtBMyIUG8K29vOouPAnOriCnGvXtUQDeqz0dT3C-3ySbw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/order/history/Daniel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"order",
+						"history",
+						"Daniel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Item By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Lyth eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEYW5pZWwiLCJleHAiOjE2NzI0MDQ3MDV9.25t_rLB5l6daHQIg03YVTiJTxY3MM59Pxa58SX1BnMtBMyIUG8K29vOouPAnOriCnGvXtUQDeqz0dT3C-3ySbw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/item/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"item",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Daniel\",\r\n    \"password\": 1234567\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
 }

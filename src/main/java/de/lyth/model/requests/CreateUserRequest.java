@@ -9,7 +9,7 @@ import lombok.Setter;
 public class CreateUserRequest {
 
     @JsonProperty
-    private String name;
+    private String username;
 
     @JsonProperty
     private String password;

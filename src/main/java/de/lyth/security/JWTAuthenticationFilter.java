@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
@@ -33,9 +34,9 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
             return manager.authenticate(
                     new UsernamePasswordAuthenticationToken(
-                            credentials.getName(),
+                            credentials.getUsername(),
                             credentials.getPassword(),
-                            new ArrayList<>()
+                            Collections.emptyList()
                     )
             );
         } catch (IOException exception) {
