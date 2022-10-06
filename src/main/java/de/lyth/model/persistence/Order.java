@@ -6,7 +6,9 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "user_order")
@@ -36,7 +38,7 @@ public class Order {
 
     public static Order createFromCart(Cart cart) {
         Order order = new Order();
-        order.setItems(cart.getItems().stream().toList());
+        order.setItems(new ArrayList<>(cart.getItems()));
         order.setTotal(cart.getTotal());
         order.setUser(cart.getUser());
         return order;

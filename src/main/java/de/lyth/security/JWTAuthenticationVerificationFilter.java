@@ -43,6 +43,7 @@ public class JWTAuthenticationVerificationFilter extends BasicAuthenticationFilt
                     .verify(token.replace(SecurityCon.TOKEN_PREFIX, ""))
                     .getSubject();
             if(user != null) {
+                System.out.println(user);
                 return new UsernamePasswordAuthenticationToken(user, null, new ArrayList<>());
             }
             return null;
