@@ -13582,3 +13582,38 @@ Database is already closed (to disable automatic closing at VM shutdown, add ";D
 Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
 06-10-2022 15:22:03 INFO  c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
 06-10-2022 15:22:03 INFO  c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+06-10-2022 15:58:25 INFO  d.l.SecurityAndDevOpsApplication:55 - Starting SecurityAndDevOpsApplication using Java 17.0.4 on PC-152 with PID 12388 (C:\Users\Daniel\IdeaProjects\Security-and-DevOps\target\classes started by Daniel in C:\Users\Daniel\IdeaProjects\Security-and-DevOps)
+06-10-2022 15:58:25 INFO  d.l.SecurityAndDevOpsApplication:634 - No active profile set, falling back to 1 default profile: "default"
+06-10-2022 15:58:25 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+06-10-2022 15:58:25 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+06-10-2022 15:58:25 INFO  o.s.d.r.c.RepositoryConfigurationDelegate:132 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06-10-2022 15:58:26 INFO  o.s.d.r.c.RepositoryConfigurationDelegate:201 - Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+06-10-2022 15:58:26 INFO  o.s.b.w.e.t.TomcatWebServer:108 - Tomcat initialized with port(s): 8080 (http)
+06-10-2022 15:58:26 INFO  o.a.c.c.StandardService:173 - Starting service [Tomcat]
+06-10-2022 15:58:26 INFO  o.a.c.c.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.65]
+06-10-2022 15:58:27 INFO  o.a.c.c.C.[.[.[/]:173 - Initializing Spring embedded WebApplicationContext
+06-10-2022 15:58:27 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext:292 - Root WebApplicationContext: initialization completed in 1538 ms
+06-10-2022 15:58:27 INFO  c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+06-10-2022 15:58:27 INFO  c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+06-10-2022 15:58:27 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration:98 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:bootapp'
+06-10-2022 15:58:27 INFO  o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+06-10-2022 15:58:27 INFO  o.h.Version:44 - HHH000412: Hibernate ORM core version 5.6.11.Final
+06-10-2022 15:58:27 INFO  o.h.a.c.Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+06-10-2022 15:58:27 INFO  o.h.d.Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06-10-2022 15:58:28 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06-10-2022 15:58:28 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-10-2022 15:58:28 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06-10-2022 15:58:29 INFO  o.s.s.w.DefaultSecurityFilterChain:55 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@38c74b11, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5892fe7a, org.springframework.security.web.context.SecurityContextPersistenceFilter@76f79bc9, org.springframework.security.web.header.HeaderWriterFilter@1e10e802, org.springframework.web.filter.CorsFilter@3240162, org.springframework.security.web.authentication.logout.LogoutFilter@3be3dc69, de.lyth.security.JWTAuthenticationFilter@6d41a36f, de.lyth.security.JWTAuthenticationVerificationFilter@6f5cf215, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@117137ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3bc2058d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2072a0aa, org.springframework.security.web.session.SessionManagementFilter@275aa7d6, org.springframework.security.web.access.ExceptionTranslationFilter@9de09be, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5882e54f]
+06-10-2022 15:58:29 INFO  o.s.b.d.a.OptionalLiveReloadServer:59 - LiveReload server is running on port 35729
+06-10-2022 15:58:29 INFO  o.s.b.w.e.t.TomcatWebServer:220 - Tomcat started on port(s): 8080 (http) with context path ''
+06-10-2022 15:58:29 INFO  d.l.SecurityAndDevOpsApplication:61 - Started SecurityAndDevOpsApplication in 4.694 seconds (JVM running for 5.597)
+06-10-2022 15:58:41 INFO  o.a.c.c.C.[.[.[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06-10-2022 15:58:41 INFO  o.s.w.s.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+06-10-2022 15:58:41 INFO  o.s.w.s.DispatcherServlet:547 - Completed initialization in 1 ms
+06-10-2022 15:58:41 INFO  d.l.c.UserController:63 - Created successfully new user: Daniel
+06-10-2022 15:58:48 INFO  d.l.c.CartController:48 - Cart created for user= Daniel and items [ItemOne].
+06-10-2022 15:59:11 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-10-2022 15:59:11 WARN  o.s.b.f.s.DisposableBeanAdapter:222 - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Die Datenbank wurde bereits geschlossen (um das automatische Schliessen beim Stopp der VM zu deaktivieren, die Datenbank URL mit ";DB_CLOSE_ON_EXIT=FALSE" ergänzen)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+06-10-2022 15:59:11 INFO  c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+06-10-2022 15:59:11 INFO  c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
