@@ -37,7 +37,10 @@ public class CartController {
     @PostMapping("/addToCart")
     public ResponseEntity<Cart> addToCart(@RequestBody ModifyCartRequest request) {
         User user = userRepository.findByUsername(request.getUsername());
-        if(user == null) return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        if(user == null) {
+            log.error("Can't create cart because the user wasn't found!");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
         Optional<Item> item = itemRepository.findById(request.getItemID());
         if(item.isEmpty()) ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 
